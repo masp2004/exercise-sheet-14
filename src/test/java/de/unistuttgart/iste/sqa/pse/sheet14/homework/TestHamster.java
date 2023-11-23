@@ -22,15 +22,11 @@ public final class TestHamster {
 	 */
 	@Test
 	public void testConfiguredHamsterOnTerritory() {
-		final HamsterGame game;
-		game = new HamsterGame();
+		final HamsterGame game = new HamsterGame();
 		final TerritoryBuilder territoryBuilder = game.getNewTerritoryBuilder();
 		territoryBuilder.initializeTerritory(new Size(TERRITORY_SIZE, TERRITORY_SIZE));
 
-		/* Configure hamster with position (0,0), direction, and number of grains */
 		territoryBuilder.defaultHamsterAt(Location.ORIGIN, Direction.EAST, 0);
-
-		/* Place a grain at position (1,0) */
 		territoryBuilder.grainAt(Location.from(1, 0));
 
 		game.initialize(territoryBuilder);
