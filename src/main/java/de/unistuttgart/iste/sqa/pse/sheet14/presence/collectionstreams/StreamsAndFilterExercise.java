@@ -50,36 +50,37 @@ public final class StreamsAndFilterExercise {
 	}
 
 	private static void printAllStudentNames(final StudentRecord record) {
-		// TODO: implement
-	}
-
-	private static void printAllStudentNamesChallenge(final StudentRecord record) {
-		// TODO: implement
+		// TODO: implement exercise 1 (b)
 	}
 
 	private static void printNumberOfStudentsOlderThan(final StudentRecord record, final int olderThan) {
-		// TODO: implement
-	}
-
-	private static void printNumberOfStudentsOlderThanChallenge(final StudentRecord record, final int olderThan) {
-		// TODO: implement
+		// TODO: implement exercise 1 (c)
 	}
 
 	private static void printStudentNamesOlderThan(final StudentRecord record, final int olderThan) {
-		// TODO: implement
-	}
-
-	private static void printStudentNamesOlderThanChallenge(final StudentRecord record, final int olderThan) {
-		// TODO: implement
+		// TODO: implement exercise 1 (d)
 	}
 
 	private static void printStudentNamesOlderThanAndFailedExam(
 			final StudentRecord record, final int olderThan, final String exam) {
-		// TODO: implement
+		// TODO: implement exercise 1 (e)
 	}
+	
 
+	private static void printAllStudentNamesChallenge(final StudentRecord record) {
+		// TODO: implement exercise 1 (f)
+	}
+	
+	private static void printNumberOfStudentsOlderThanChallenge(final StudentRecord record, final int olderThan) {
+		// TODO: implement exercise 1 (f)
+	}
+	
+	private static void printStudentNamesOlderThanChallenge(final StudentRecord record, final int olderThan) {
+		// TODO: implement exercise 1 (f)
+	}
+	
 	private static void printStudentNamesOlderThanAndFailedExamChallenge(
 			final StudentRecord record, final int olderThan, final String exam) {
-		// TODO: implement
+		// TODO: implement exercise 1 (f)
 	}
 }
