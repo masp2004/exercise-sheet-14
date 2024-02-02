@@ -44,6 +44,12 @@ To install Java, set up your IDE and clone the repository into your workspace, p
 mvn clean compile exec:java@$MAIN_CLASS
 ```
 so, for example:
+
 ```sh
 mvn clean compile exec:java@StreamsAndFilterExercise
 ```
+to run the test use this:
+
+```sh
+mvn clean test -Dtest=TestHamster
+``
