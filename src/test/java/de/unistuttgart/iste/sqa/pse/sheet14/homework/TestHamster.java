@@ -1,9 +1,6 @@
 package de.unistuttgart.iste.sqa.pse.sheet14.homework;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Test;
 
 import de.hamstersimulator.objectsfirst.datatypes.Direction;
 import de.hamstersimulator.objectsfirst.datatypes.Location;
@@ -11,6 +8,7 @@ import de.hamstersimulator.objectsfirst.datatypes.Size;
 import de.hamstersimulator.objectsfirst.external.model.Hamster;
 import de.hamstersimulator.objectsfirst.external.model.HamsterGame;
 import de.hamstersimulator.objectsfirst.external.model.TerritoryBuilder;
+import org.junit.jupiter.api.Test;
 
 public final class TestHamster {
 

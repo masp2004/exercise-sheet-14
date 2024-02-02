@@ -65,20 +65,19 @@ public final class StreamsAndFilterExercise {
 			final StudentRecord record, final int olderThan, final String exam) {
 		// TODO: implement exercise 1 (e)
 	}
-	
 
 	private static void printAllStudentNamesChallenge(final StudentRecord record) {
 		// TODO: implement exercise 1 (f)
 	}
-	
+
 	private static void printNumberOfStudentsOlderThanChallenge(final StudentRecord record, final int olderThan) {
 		// TODO: implement exercise 1 (f)
 	}
-	
+
 	private static void printStudentNamesOlderThanChallenge(final StudentRecord record, final int olderThan) {
 		// TODO: implement exercise 1 (f)
 	}
-	
+
 	private static void printStudentNamesOlderThanAndFailedExamChallenge(
 			final StudentRecord record, final int olderThan, final String exam) {
 		// TODO: implement exercise 1 (f)
