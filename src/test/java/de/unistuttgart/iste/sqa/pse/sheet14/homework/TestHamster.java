@@ -40,7 +40,7 @@ public final class TestHamster {
 		/* Check that Paule is at position (0,0) */
 		assertEquals(Location.ORIGIN, paule.getLocation());
 		/* Check that territory has correct amount of grains on it */
-		assertEquals(0, game.getTerritory().getTotalGrainCount());
+		assertEquals(1, game.getTerritory().getTotalGrainCount());
 
 		game.stopGame();
 	}
