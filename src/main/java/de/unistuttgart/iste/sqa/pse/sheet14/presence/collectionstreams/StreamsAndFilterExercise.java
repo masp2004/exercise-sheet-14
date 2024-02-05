@@ -1,5 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.sheet14.presence.collectionstreams;
 
+import java.util.*;
+
 /**
  * In this class you are supposed to train your skills in using the Java Streams
  * API and Collections. Implement the four empty operations in this class
@@ -50,32 +52,60 @@ public final class StreamsAndFilterExercise {
 	}
 
 	private static void printAllStudentNames(final StudentRecord record) {
-		// TODO: implement exercise 1 (b)
+		record.getAllStudents().stream()
+				.map(Student::getName)
+				.forEach(System.out::println);
 	}
 
 	private static void printNumberOfStudentsOlderThan(final StudentRecord record, final int olderThan) {
-		// TODO: implement exercise 1 (c)
+		long count = record.getAllStudents().stream()
+				.filter(student -> student.getAge() > olderThan)
+				.count();
+		System.out.println("Number of students older than " + olderThan + ": " + count);
 	}
 
 	private static void printStudentNamesOlderThan(final StudentRecord record, final int olderThan) {
-		// TODO: implement exercise 1 (d)
+		record.getAllStudents().stream()
+				.filter(student -> student.getAge() > olderThan)
+				.map(Student::getName)
+				.forEach(System.out::println);
 	}
 
 	private static void printStudentNamesOlderThanAndFailedExam(
 			final StudentRecord record, final int olderThan, final String exam) {
-		// TODO: implement exercise 1 (e)
+		record.getAllStudents().stream()
+				.filter(student -> student.getAge() > olderThan)
+				.filter(student -> student.getExam(exam).getMark() > 4.0)
+				.map(Student::getName)
+				.forEach(System.out::println);
 	}
 
 	private static void printAllStudentNamesChallenge(final StudentRecord record) {
-		// TODO: implement exercise 1 (f)
+		for (Student student : record.getAllStudents()) {
+			System.out.println(student.getName());
+		}
 	}
 
 	private static void printNumberOfStudentsOlderThanChallenge(final StudentRecord record, final int olderThan) {
-		// TODO: implement exercise 1 (f)
+		int count = 0;
+		for (Student student : record.getAllStudents()) {
+			if (student.getAge() > olderThan) {
+				count++;
+			}
+		}
+		System.out.println(count);
 	}
 
 	private static void printStudentNamesOlderThanChallenge(final StudentRecord record, final int olderThan) {
-		// TODO: implement exercise 1 (f)
+		Set<String> students = new HashSet<>();
+		for (Student student : record.getAllStudents()) {
+			if (student.getAge() > olderThan) {
+				students.add(student.getName());
+			}
+		}
+		for (String name : students) {
+			System.out.println(name);
+		}
 	}
 
 	private static void printStudentNamesOlderThanAndFailedExamChallenge(

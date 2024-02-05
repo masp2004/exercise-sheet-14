@@ -13,7 +13,7 @@ public final class StudentRecord {
 	private final Set<Student> students;
 
 	public StudentRecord() {
-		this.students = new HashSet<Student>();
+		this.students = new HashSet<>();
 	}
 
 	/*@
