@@ -44,4 +44,54 @@ public final class TestHamster {
 
 		game.stopGame();
 	}
+
+	@Test
+	public void testMove() {
+		final HamsterGame game = new HamsterGame();
+		final TerritoryBuilder territoryBuilder =  game.getNewTerritoryBuilder();
+		territoryBuilder.initializeTerritory(new Size(TERRITORY_SIZE, TERRITORY_SIZE));
+
+		territoryBuilder.defaultHamsterAt(Location.ORIGIN, Direction.EAST, 0);
+		territoryBuilder.grainAt(Location.from(1,0));
+
+		game.initialize(territoryBuilder);
+		game.startGame();
+
+		final Hamster paule = game.getTerritory().getDefaultHamster();
+
+		// Check that Paule is at a valid position
+		assertEquals(Location.ORIGIN, paule.getLocation());
+
+		paule.move();
+
+		//Check that Paule has moved
+		assertEquals(Location.from(1,0), Location.from(1,0));
+
+		game.stopGame();
+	}
+
+	@Test
+	public void testPickGrain() {
+		final HamsterGame game = new HamsterGame();
+		final TerritoryBuilder territoryBuilder =  game.getNewTerritoryBuilder();
+		territoryBuilder.initializeTerritory(new Size(TERRITORY_SIZE, TERRITORY_SIZE));
+
+		territoryBuilder.defaultHamsterAt((Location.from(0,0)), Direction.EAST, 0);
+		territoryBuilder.grainAt(Location.from(0,0));
+
+		game.initialize(territoryBuilder);
+		game.startGame();
+
+		final Hamster paule = game.getTerritory().getDefaultHamster();
+
+		// Check that Paule is at a valid position
+		assertEquals(Location.ORIGIN, paule.getLocation());
+
+		paule.pickGrain();
+
+		//Check that Paule has picked up a grain
+		assertEquals(true, !paule.mouthEmpty());
+
+		game.stopGame();
+	}
 }
